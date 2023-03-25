@@ -11,6 +11,7 @@
 import HelloWorld from './components/HelloWorld.vue';
 // use moudle declared by yourself
 import testFunc from '../zmoudle/test02.js';
+// pay attention to the order
 console.log('%c the second time callback','color: purple')
 testFunc()
 
@@ -19,6 +20,12 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  // not like code above,if code runs here,the order 1st and 2nd will be diff
+  mounted(){
+    // use moudle declared by yourself    
+    // console.log('%c the second time callback','color: purple')
+    // testFunc()
   },
   methods:{
     // show message tips
