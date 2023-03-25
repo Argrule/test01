@@ -2,6 +2,8 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- use el-button -->
+    <el-button type="primary" @click="sayhi">HELLO</el-button>
   </div>
 </template>
 
@@ -17,6 +19,16 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  methods:{
+    // show message tips
+    sayhi(){
+      this.$message('hi');
+      // this.$message({
+      //     message: 'hi',
+      //     type: 'success'
+      //   });
+    }
   }
 }
 </script>
